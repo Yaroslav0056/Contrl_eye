@@ -1,0 +1,26 @@
+# Ігнорувати node_modules
+node_modules/
+
+# Ігнорувати файли середовища
+.env
+
+# Ігнорувати лог-файли
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ігнорувати файли системи
+.DS_Store
+Thumbs.db
+
+# Ігнорувати кеш npm
+.npm/
+
+# Ігнорувати ідеї IDE
+.idea/
+*.iml
+.vscode/
+
+# Ігнорувати build-файли
+dist/
+build/
