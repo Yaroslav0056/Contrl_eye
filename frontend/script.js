@@ -2,13 +2,19 @@ function toggleAnonymousFields() {
   const isAnonymous = document.getElementById("anonymous").checked;
   const usernameField = document.getElementById("username");
   const emailField = document.getElementById("email");
+  const emailError = document.getElementById("email-error");
+  const usernameError = document.getElementById("username-error");
+
+  console.log("toggleAnonymousFields викликано!"); 
 
   if (isAnonymous) {
+    console.log("Анонімно: сховати поля"); 
     usernameField.style.display = "none";
     emailField.style.display = "none";
-    document.getElementById("email-error").style.display = "none";
-    document.getElementById("username-error").style.display = "none";
+    emailError.style.display = "none";
+    usernameError.style.display = "none"; 
   } else {
+    console.log("Не анонімно: показати поля"); 
     usernameField.style.display = "block";
     emailField.style.display = "block";
   }
@@ -58,5 +64,5 @@ function submitFeedback() {
   document.getElementById("username").value = "";
   document.getElementById("anonymous").checked = false;
 
-  toggleAnonymousFields();
+  toggleAnonymousFields(); 
 }
