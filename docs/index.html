@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ContrEye Feedback</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Камера ContrEye</h1>
+      <h2>Сайт для зворотнього зв'язку</h2>
+    </div>
+
+    <div class="container">
+      <h3>Напишіть свій коментар</h3>
+      <textarea
+        id="feedback"
+        placeholder="Напишіть свій коментар тут..."
+      ></textarea>
+      <div id="feedback-error" class="error-message" style="display: none">
+        Будь ласка, напишіть коментар!
+      </div>
+
+      <input type="text" id="username" placeholder="Ваше ім'я" />
+      <div id="username-error" class="error-message" style="display: none">
+        Будь ласка, введіть ваше ім'я!
+      </div>
+
+      <input type="email" id="email" placeholder="Ваш email" />
+      <div id="email-error" class="error-message" style="display: none">
+        Будь ласка, введіть правильний email!
+      </div>
+
+      <div>
+        <label class="checkbox-label">
+          <input
+            type="checkbox"
+            id="anonymous"
+            onchange="toggleAnonymousFields()"
+          />
+          Анонімно відправити?
+        </label>
+      </div>
+
+      <button onclick="submitFeedback()">Відправити</button>
+      <div id="thank-you" class="thank-you">Дякуємо за ваш коментар!</div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
