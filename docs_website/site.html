@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ControlEye</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ControlEye</h1>
+      <p>Розумні камери для вашої охорони</p>
+      <nav>
+        <a href="#product">Про продукт</a>
+        <a href="#how-it-works">Як це працює</a>
+        <a href="#audience">Для кого</a>
+        <a href="#contact">Контакти</a>
+      </nav>
+    </header>
+
+    <section id="product">
+      <h2>Про продукт</h2>
+      <p>
+        ControlEye – це інноваційні камери, які автоматично змінюють якість
+        відеозйомки залежно від виявлення руху, зберігаючи пам’ять і ресурси.
+      </p>
+      <ul>
+        <li>Автоматична зміна якості відео.</li>
+        <li>Висока роздільна здатність для важливих моментів.</li>
+        <li>Вбудований датчик руху.</li>
+      </ul>
+    </section>
+
+    <section id="how-it-works">
+      <h2>Як це працює</h2>
+      <p>
+        Наші камери переходять на високоякісну зйомку лише тоді, коли виявлено
+        рух, зберігаючи ресурси та забезпечуючи точність відео у потрібний
+        момент.
+      </p>
+      <a
+        href="https://docs.google.com/document/d/1UHfOlFl3XE5mf85aK1EOtSRsIbJZ6GNV/edit?usp=sharing&ouid=109722676479309047370&rtpof=true&sd=true"
+        target="_blank"
+        class="cta-button"
+        >Дізнатися більше</a
+      >
+    </section>
+
+    <section id="audience">
+      <h2>Для кого</h2>
+      <p>Наші камери ідеально підходять для:</p>
+      <ul>
+        <li>Будівельних компаній</li>
+        <li>Приватних підприємств</li>
+        <li>Охоронних служб</li>
+        <li>Корпоративних клієнтів</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Контакти</h2>
+      <p>Зв’яжіться з нами для консультації або додаткової інформації.</p>
+      <div class="contact-form">
+        <input id="name" type="text" placeholder="Ваше ім’я" required />
+        <input id="email" type="email" placeholder="Ваш email" required />
+        <textarea
+          id="message"
+          placeholder="Ваше повідомлення"
+          rows="4"
+          required
+        ></textarea>
+        <button type="submit" onclick="validateForm()">Відправити</button>
+        <div id="error-message" class="error-message">
+          Будь ласка, заповніть всі поля коректно.
+        </div>
+        <div id="success-message" class="success-message">
+          Дякуємо за ваш коментар! Ми з вами зв'яжемося найближчим часом.
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 ControlEye. Всі права захищені.</p>
+      <p>
+        Email:
+        <a href="mailto:support@controleye.com">support@controleye.com</a>
+      </p>
+      <p>Телефон: <a href="tel:+380501234567">+380 xx xxx xxx</a></p>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
