@@ -1,6 +1,6 @@
 html {
   height: 100%;
-  background: linear-gradient(135deg, #96c93d, #00b09b, #3a78fd);
+  background: linear-gradient(135deg, #921d87, #0e166c);
   scroll-behavior: smooth;
 }
 
@@ -8,7 +8,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Arial", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: white;
 }
 
@@ -20,16 +20,31 @@ header {
 }
 
 footer {
-  background: linear-gradient(
-    135deg,
-    rgba(0, 179, 155, 0.8),
-    rgba(58, 120, 253, 0.8)
-  );
+  background: linear-gradient(135deg, #921d87, #0e166c);
   color: white;
   padding: 20px 0;
   text-align: center;
   backdrop-filter: blur(5px);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+}
+
+footer a:hover {
+  color: #d16ba5;
+}
+
+footer a:active {
+  color: #921d87;
 }
 
 header h1 {
@@ -50,60 +65,83 @@ nav a {
   margin: 0 20px;
   text-decoration: none;
   font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: none;
-  color: #005fa3;
+  background: linear-gradient(135deg, #b537b8, #3c2b89);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(181, 55, 184, 0.5);
 }
 
 section {
-  padding: 60px 10%;
-  margin: 40px 0;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #333;
+  padding: 40px 5%;
+  margin: 40px auto;
+  max-width: 1337px;
+  background: linear-gradient(135deg, rgba(20, 20, 50, 0.95), rgba(10, 10, 30, 0.95));
+  color: rgba(225, 195, 225, 0.9);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
 }
 
 section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, #96c93d, #00b09b, #3a78fd);
+  background: linear-gradient(135deg, #d16ba5, #921d87);
   -webkit-background-clip: text;
   color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-section p {
-  font-size: 1rem;
-  line-height: 1.6;
+section p,
+section ul li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(235, 215, 235, 0.9);
+  text-align: justify;
 }
 
 section ul {
   list-style-type: disc;
-  padding: 0;
+  padding: 0 20px;
 }
 
 section ul li {
-  font-size: 1rem;
   margin-bottom: 10px;
 }
 
-.cta-button {
+section ul li::marker {
+  color: #d16ba5;
+}
+
+button, .cta-button {
   display: inline-block;
   padding: 15px 30px;
-  background: linear-gradient(135deg, #96c93d, #00b09b, #3a78fd);
+  background: linear-gradient(135deg, #921d87, #0e166c);
   color: white;
   text-decoration: none;
   border-radius: 5px;
   margin-top: 20px;
   font-size: 1rem;
   border: none;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cta-button:hover {
-  background: linear-gradient(135deg, #00b09b, #3a78fd, #96c93d);
+button:hover, .cta-button:hover {
+  background: linear-gradient(135deg, #b537b8, #3c2b89);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(181, 55, 184, 0.5);
 }
 
 .contact-form input,
@@ -112,24 +150,23 @@ section ul li {
   padding: 15px;
   margin: 10px 0;
   border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.contact-form button {
-  display: inline-block;
-  padding: 15px 30px;
-  background: linear-gradient(135deg, #96c93d, #00b09b, #3a78fd);
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, rgba(20, 20, 50, 0.9), rgba(10, 10, 30, 0.9));
+  color: rgba(235, 215, 235, 0.9);
   font-size: 1rem;
-  border: none;
-  transition: background 0.3s ease;
 }
 
-.contact-form button:hover {
-  background: linear-gradient(135deg, #00b09b, #3a78fd, #96c93d);
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(200, 200, 200, 0.7);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #d16ba5;
+  box-shadow: 0 0 5px rgba(209, 107, 165, 0.5);
+  background: linear-gradient(135deg, rgba(30, 30, 60, 0.95), rgba(15, 15, 35, 0.95));
 }
 
 .error-message,
@@ -137,14 +174,21 @@ section ul li {
   display: none;
   margin-top: 10px;
   padding: 10px;
-  background-color: #ffdddd;
-  color: #ff0000;
-  border: 1px solid #ff0000;
   border-radius: 5px;
+  background-color: rgba(20, 20, 50, 0.9);
+  color: rgba(235, 215, 235, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .success-message {
-  background-color: #ddffdd;
-  color: #008000;
-  border: 1px solid #008000;
+  border-color: #008000;
+}
+
+.error-message {
+  border-color: #ff0000;
+}
+
+.highlight {
+  color: #ff6347;
+  font-weight: bold;
 }

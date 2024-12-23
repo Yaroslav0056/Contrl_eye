@@ -9,18 +9,25 @@ function validateForm() {
     errorMessage.textContent = "Будь ласка, заповніть всі поля.";
     errorMessage.style.display = "block";
     successMessage.style.display = "none";
+    setTimeout(function () {
+      errorMessage.style.display = "none";
+    }, 5000);
     return false;
   }
 
   var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   if (!emailPattern.test(email)) {
     errorMessage.textContent =
-      "Будь ласка, введіть правильну адресу електронної пошти.";
+      "Невірна адреса електронної пошти. Перевірте формат.";
     errorMessage.style.display = "block";
     successMessage.style.display = "none";
+    setTimeout(function () {
+      errorMessage.style.display = "none";
+    }, 5000);
     return false;
   }
 
+  successMessage.textContent = "Форма надіслана успішно!";
   successMessage.style.display = "block";
   errorMessage.style.display = "none";
 
