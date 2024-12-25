@@ -2,6 +2,7 @@ html {
   height: 100%;
   background: linear-gradient(135deg, #921d87, #0e166c);
   scroll-behavior: smooth;
+  background-attachment: fixed;
 }
 
 body {
@@ -26,7 +27,9 @@ footer {
   text-align: center;
   backdrop-filter: blur(5px);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: bold; /* Зробити шрифт жирним */
 }
+
 
 footer p {
   margin: 10px 0;
