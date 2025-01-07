@@ -20,36 +20,6 @@ header {
   background: inherit;
 }
 
-footer {
-  background: linear-gradient(135deg, #921d87, #0e166c);
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-  backdrop-filter: blur(5px);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  font-weight: bold; /* Зробити шрифт жирним */
-}
-
-
-footer p {
-  margin: 10px 0;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-  font-family: "Poppins", sans-serif;
-  font-weight: normal;
-}
-
-footer a:hover {
-  color: #d16ba5;
-}
-
-footer a:active {
-  color: #921d87;
-}
-
 header h1 {
   font-size: 3rem;
   margin: 0;
@@ -84,7 +54,11 @@ section {
   padding: 40px 5%;
   margin: 40px auto;
   max-width: 1337px;
-  background: linear-gradient(135deg, rgba(20, 20, 50, 0.95), rgba(10, 10, 30, 0.95));
+  background: linear-gradient(
+    135deg,
+    rgba(20, 20, 50, 0.95),
+    rgba(10, 10, 30, 0.95)
+  );
   color: rgba(225, 195, 225, 0.9);
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
@@ -128,7 +102,8 @@ section ul li::marker {
   color: #d16ba5;
 }
 
-button, .cta-button {
+button,
+.cta-button {
   display: inline-block;
   padding: 15px 30px;
   background: linear-gradient(135deg, #921d87, #0e166c);
@@ -141,7 +116,8 @@ button, .cta-button {
   transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-button:hover, .cta-button:hover {
+button:hover,
+.cta-button:hover {
   background: linear-gradient(135deg, #b537b8, #3c2b89);
   transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(181, 55, 184, 0.5);
@@ -154,7 +130,11 @@ button:hover, .cta-button:hover {
   margin: 10px 0;
   border-radius: 5px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  background: linear-gradient(135deg, rgba(20, 20, 50, 0.9), rgba(10, 10, 30, 0.9));
+  background: linear-gradient(
+    135deg,
+    rgba(20, 20, 50, 0.9),
+    rgba(10, 10, 30, 0.9)
+  );
   color: rgba(235, 215, 235, 0.9);
   font-size: 1rem;
 }
@@ -169,29 +149,115 @@ button:hover, .cta-button:hover {
   outline: none;
   border-color: #d16ba5;
   box-shadow: 0 0 5px rgba(209, 107, 165, 0.5);
-  background: linear-gradient(135deg, rgba(30, 30, 60, 0.95), rgba(15, 15, 35, 0.95));
+  background: linear-gradient(
+    135deg,
+    rgba(30, 30, 60, 0.95),
+    rgba(15, 15, 35, 0.95)
+  );
+}
+
+footer {
+  background: linear-gradient(135deg, #921d87, #0e166c);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+}
+
+footer a:hover {
+  color: #d16ba5;
+}
+
+footer a:active {
+  color: #921d87;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 20px 5%;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  nav {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  nav a {
+    margin: 10px 5px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 20px 5%;
+    margin: 20px auto;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  section p,
+  section ul li {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  footer {
+    padding: 15px 5%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  button,
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
 }
 
 .error-message,
 .success-message {
-  display: none;
   margin-top: 10px;
   padding: 10px;
   border-radius: 5px;
-  background-color: rgba(20, 20, 50, 0.9);
-  color: rgba(235, 215, 235, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.success-message {
-  border-color: #008000;
+  font-size: 1rem;
+  text-align: center;
 }
 
 .error-message {
-  border-color: #ff0000;
+  color: #ff4d4f;
+  background-color: rgba(255, 77, 79, 0.2);
+  border: 1px solid #ff4d4f;
 }
 
-.highlight {
-  color: #ff6347;
-  font-weight: bold;
+.success-message {
+  color: #52c41a;
+  background-color: rgba(82, 196, 26, 0.2);
+  border: 1px solid #52c41a;
 }
