@@ -31,7 +31,6 @@ function validateForm() {
   successMessage.style.display = "block";
   errorMessage.style.display = "none";
 
-  // Очищення полів форми
   document.getElementById("name").value = "";
   document.getElementById("email").value = "";
   document.getElementById("message").value = "";
@@ -40,5 +39,5 @@ function validateForm() {
     successMessage.style.display = "none";
   }, 5000);
 
-  return false; // Залишаємо false, щоб уникнути перезавантаження сторінки
+  return false;
 }
